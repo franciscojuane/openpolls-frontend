@@ -18,15 +18,15 @@ const AuthService = {
     store.commit("removeCurrentUser");
   },
   hasRole(role) {
-    let user = JSON.parse(window.localStorage.getItem("user"));
+    let user = store.getters.getCurrentUser;
     return user.roles.find((elem) => elem.name == role) != null;
   },
   getUser() {
-    let user = JSON.parse(window.localStorage.getItem("user"));
+    let user = store.getters.getCurrentUser;
     return user;
   },
   hasPermission(permission) {
-    let user = JSON.parse(window.localStorage.getItem("user"));
+    let user = store.getters.getCurrentUser;
     for (let role of user.roles) {
       for (let rolePermission of role.permissions) {
         if (rolePermission.name == permission) {

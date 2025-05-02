@@ -12,7 +12,11 @@ export default new Vuex.Store({
   state: {
     currentUser: null,
   },
-  getters: {},
+  getters: {
+    getCurrentUser(state) {
+      return state.currentUser;
+    },
+  },
   mutations: {
     setCurrentUser(state, payload) {
       state.currentUser = payload.user;
