@@ -1,4 +1,4 @@
-# OpenPolls Frontend
+# OpenPolls Frontend (Vue 2 version)
 
 ## Description
 
